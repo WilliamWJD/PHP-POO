@@ -51,6 +51,10 @@
 		}
 	}
 
+	class Caminhao extends veiculo{
+
+	}
+
 
 	$carro=new Carro('EIJ7766','Prata');
 	$carro->trocarMarcha();
@@ -59,6 +63,11 @@
 
 	$moto=new Moto('kkk123','Azul');
 	$moto->trocarMarcha();
+
+	echo '<hr>';
+
+	$caminhao=new Caminhao();
+	$caminhao->trocarMarcha();
 
 
 
