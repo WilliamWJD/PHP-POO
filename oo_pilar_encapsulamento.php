@@ -32,17 +32,25 @@
 		
 	}
 
-	$pai=new Pai();
-	echo 'O Funcionário ',$pai->__get('nome'),' ', $pai->__get('sobrenome'),' está se sentindo ',$pai->__get('humor');
-	echo '<hr>';
+	class Filho extends Pai{
+		/*
+		public function getAtributo($atributo){
+			return $this->$atributo;
+		}
 
-	$pai->__set('nome','Karolaine');
-	$pai->__set('sobrenome','Ribeiro Dias');
-	$pai->__set('humor','Irritada');
+		public function setAtributo($atributo, $valor){
+			$this->$atributo=$valor;
+		}
+		*/
+	}
 
-	echo 'A Funcionária ',$pai->__get('nome'),' ', $pai->__get('sobrenome'),' está se sentindo ',$pai->__get('humor');
-	
-	echo '<hr>';
+	$filho=new Filho();
+	echo '<pre>';
+		print_r($filho);
+	echo '</pre>';
 
-	echo $pai->executarAcao();
+	//exibir os metodos
+	echo '<pre>';
+		print_r(get_class_methods($filho));
+	echo '</pre>';
 ?>
